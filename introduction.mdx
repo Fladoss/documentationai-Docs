@@ -1,0 +1,95 @@
+---
+title: Welcome to Cuddly Records
+description: Discover Cuddly Records, your default documentation space for organizing and managing project documentation with ease.
+---
+
+## Overview
+
+Cuddly Records provides a centralized hub for your project documentation. You can organize pages, embed code snippets, and collaborate seamlessly. This space scales with your needs, from simple READMEs to comprehensive guides.
+
+## Key Features
+
+Cuddly Records offers powerful tools to streamline your documentation workflow.
+
+<Columns cols={3}>
+  <Card title="Intuitive Organization" icon="folder" href="/docs/organization">
+    Nest pages hierarchically and use tags for quick searches. Maintain clean structures without complexity.
+  </Card>
+  <Card title="Rich Content Support" icon="edit-3" href="/docs/content">
+    Embed code blocks, diagrams, and interactive components directly in your docs.
+  </Card>
+  <Card title="Collaboration Tools" icon="users" href="/docs/collaboration">
+    Share spaces with teams, track changes, and leave comments for efficient reviews.
+  </Card>
+</Columns>
+
+<Callout kind="tip">
+  Start by creating your first page to experience these features firsthand.
+</Callout>
+
+## Quick Start
+
+Get up and running in minutes with these steps.
+
+<Steps>
+  <Step title="Create Account" icon="user-plus">
+    Sign up at `https://dashboard.example.com/register` using your email.
+  </Step>
+  <Step title="Set Up Space" icon="plus">
+    From the dashboard, click "New Space" and name it "My Project Docs".
+  </Step>
+  <Step title="Add First Page" icon="file-plus">
+    Navigate to your space and create a page titled "README". Add content using the editor.
+  </Step>
+  <Step title="Publish" icon="globe">
+    Click "Publish" to make your docs live and share the URL with your team.
+  </Step>
+</Steps>
+
+## Quick Navigation
+
+Access core sections quickly.
+
+<Columns cols={2}>
+  <Card title="Quickstart Guide" icon="zap" href="/quickstart">
+    Dive into detailed setup instructions and examples.
+  </Card>
+  <Card title="Authentication" icon="lock" href="/authentication">
+    Secure your space with API keys and user roles.
+  </Card>
+  <Card title="API Reference" icon="code" href="/api-reference">
+    Integrate programmatically with `https://api.example.com`.
+  </Card>
+  <Card title="Changelog" icon="git-branch" href="/changelog">
+    Stay updated on the latest releases and improvements.
+  </Card>
+</Columns>
+
+## Embed Examples in Your Docs
+
+Showcase code directly in pages for better clarity.
+
+<CodeGroup tabs="JavaScript,Python">
+  ```javascript
+  // Fetch your docs
+  const response = await fetch('https://api.example.com/docs/YOUR_SPACE_ID', {
+    headers: { Authorization: `Bearer ${YOUR_API_KEY}` }
+  });
+  const docs = await response.json();
+  console.log(docs);
+  ```
+  ```python
+  # Fetch your docs
+  import requests
+  response = requests.get(
+      'https://api.example.com/docs/YOUR_SPACE_ID',
+      headers={'Authorization': f'Bearer {YOUR_API_KEY}'}
+  )
+  docs = response.json()
+  print(docs)
+  ```
+</CodeGroup>
+
+<Callout kind="info">
+  Explore the full API at `/api-reference` or customize your space further with webhooks at `https://your-webhook-url.com/webhook`.
+</Callout>

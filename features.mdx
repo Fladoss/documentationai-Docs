@@ -1,0 +1,123 @@
+---
+title: Core Features of Cuddly Records
+description: Explore the essential tools for organizing, editing, and collaborating on project documentation.
+---
+
+## Overview
+
+Cuddly Records provides powerful tools to manage your project documentation efficiently. You organize content into folders, edit with rich formatting options, track changes via version control, and collaborate seamlessly with your team. These core features help you maintain a centralized, up-to-date knowledge base.
+
+<Columns cols={2}>
+  <Card title="Document Folders" icon="folder" href="#document-organization">
+    Structure your docs hierarchically for easy navigation.
+  </Card>
+  <Card title="Editing Tools" icon="edit-3" href="#editing-tools">
+    Visual and Markdown editors with real-time previews.
+  </Card>
+  <Card title="Version Control" icon="git-branch" href="#version-control">
+    Track edits and revert changes effortlessly.
+  </Card>
+  <Card title="Collaboration" icon="users" href="#collaboration">
+    Share, comment, and assign permissions securely.
+  </Card>
+</Columns>
+
+## Document Organization and Folders
+
+You create nested folders to group related documents, making large projects easy to navigate. Start by clicking the "New Folder" button in the sidebar.
+
+<Steps>
+  <Step title="Create a Folder" icon="folder-plus">
+    Navigate to your workspace sidebar.
+
+    Click `New Folder` and enter a name like "API Reference".
+  </Step>
+  <Step title="Move Documents" icon="move">
+    Drag and drop pages into folders.
+
+    Use the context menu for bulk operations.
+  </Step>
+  <Step title="Search and Filter" icon="search">
+    Use the global search to find content across folders.
+  </Step>
+</Steps>
+
+<Callout kind="tip">
+  Folders support unlimited nesting, but keep hierarchies to 3 levels deep for optimal performance.
+</Callout>
+
+## Editing and Formatting Tools
+
+Cuddly Records offers dual editing modes: a WYSIWYG visual editor and Markdown support. Switch between them instantly for your preferred workflow.
+
+<Tabs>
+  <Tab title="Visual Editor" icon="edit">
+    Drag-and-drop blocks for headings, images, and code.
+
+    ```
+
+    <Image
+      src="https://example.com/visual-editor-screenshot.png"
+      alt="Visual editor interface"
+      width="800"
+      height="500"
+    />
+
+    ```
+  </Tab>
+  <Tab title="Markdown" icon="code">
+    Write in standard Markdown with live preview.
+
+````markdown
+# Welcome to Cuddly Records
+
+## Quick Start
+
+- Install via `npm install cuddly-records-sdk`
+- Initialize: `const client = new CuddlyRecords({ apiKey: 'YOUR_API_KEY' });`
+
+> Blockquotes for tips.
+````
+
+  </Tab>
+</Tabs>
+
+## Version Control for Docs
+
+Every edit creates a new version automatically. You view history, compare changes, and restore previous versions without losing work.
+
+<CodeGroup tabs="CLI,API">
+````javascript
+// View versions via API
+const versions = await client.docs.getVersions('doc-id');
+console.log(versions); // [{ id: 'v1', date: '2024-01-15', changes: 'Added intro' }]
+````
+
+````bash
+# CLI command to restore
+cuddly-records docs restore doc-id v1.2.0
+````
+</CodeGroup>
+
+<Expandable title="Advanced Version Features" default-open="false">
+  Branching allows experimental edits without affecting the main version.
+
+  Merge conflicts resolve automatically for text-only changes.
+</Expandable>
+
+## Collaboration and Sharing Options
+
+Invite team members and set granular permissions. You share public links or embed docs in external sites.
+
+| Feature | Description | Permission Levels |
+|---------|-------------|-------------------|
+| Invite Users | Add by email | Viewer, Editor, Admin |
+| Comments | Real-time threaded discussions | All users |
+| Sharing | Public or private links | Read-only, Full access |
+| Webhooks | Notify on changes | Custom integrations |
+
+<Callout kind="info">
+  Use `{API_KEY}` from your dashboard at `https://dashboard.example.com` for programmatic sharing.
+</Callout>
+
+Start building your documentation workspace today with these features. For setup, see the [quickstart guide](/quickstart).

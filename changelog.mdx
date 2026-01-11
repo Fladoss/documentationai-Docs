@@ -1,0 +1,120 @@
+---
+title: Changelog
+description: Track the latest updates and improvements to Cuddly Records.
+---
+
+## Recent Updates
+
+Stay informed about all changes to Cuddly Records. You receive notifications for major releases, and this page lists the most recent updates with details on new features, improvements, and fixes.
+
+<Update label="2024-10-15" description="v1.2.0" tags={["feature", "bugfix"]}>
+
+## New Features
+
+- Added real-time collaboration, allowing multiple users to edit records simultaneously with live cursors and conflict resolution.
+- Introduced custom record templates, enabling you to create reusable structures for common document types.
+
+## Improvements
+
+- Enhanced search performance by 40% with indexed full-text querying.
+- Updated the dashboard UI for better mobile responsiveness.
+
+## Bug Fixes
+
+- Fixed sync issues when uploading large record files over unstable connections.
+- Resolved authentication token refresh errors during long sessions.
+
+</Update>
+
+<Update label="2024-09-20" description="v1.1.0" tags={["feature", "improvement"]}>
+
+## New Features
+
+- Integrated webhook support for automating workflows when records change.
+- Added version history with diff views to track edits over time.
+
+## Improvements
+
+- Optimized database queries to reduce load times for collections with `<1000` records.
+- Improved export options, now supporting CSV, PDF, and JSON formats.
+
+## Bug Fixes
+
+- Corrected drag-and-drop reordering in record lists.
+- Patched a vulnerability in shared link permissions.
+
+</Update>
+
+<Update label="2024-08-10" description="v1.0.0" tags={["feature", "breaking"]}>
+
+## New Features
+
+- Core record management system with create, read, update, and delete operations.
+- User authentication via API keys and OAuth integration.
+
+## Breaking Changes
+
+- Updated API endpoints from `/v0/` to `/v1/` prefix. Update your integrations accordingly.
+
+## Improvements
+
+- Initial setup wizard for new projects.
+
+</Update>
+
+## Upcoming Changes
+
+Get a preview of what's coming next to Cuddly Records. These features are in development and scheduled for future releases.
+
+<Columns cols={2}>
+  <Card title="AI-Powered Insights" icon="zap" href="#">
+    Automatically generate summaries and detect anomalies in your records.
+  </Card>
+  <Card title="Advanced Permissions" icon="shield" href="#">
+    Granular role-based access control for teams and external collaborators.
+  </Card>
+  <Card title="Mobile App" icon="smartphone" href="#">
+    Full-featured iOS and Android apps for on-the-go record management.
+  </Card>
+</Columns>
+
+## How to Upgrade
+
+Follow these steps to update Cuddly Records safely.
+
+<Steps>
+  <Step title="Check Compatibility" icon="check-circle">
+
+    Review the release notes for breaking changes.
+
+    <Callout kind="alert">
+      Backup your database before proceeding.
+    </Callout>
+
+  </Step>
+  <Step title="Run the Update" icon="download">
+
+    Use the CLI tool for seamless upgrades.
+
+    <CodeGroup tabs="npm,Docker">
+      ````bash
+      npm update cuddly-records@latest
+      ````
+
+      ````bash
+      docker pull cuddlyrecords/app:latest
+      docker-compose up -d
+      ````
+    </CodeGroup>
+
+  </Step>
+  <Step title="Verify Installation" icon="search">
+
+    Test core functionality like record creation and search.
+
+  </Step>
+</Steps>
+
+<Callout kind="tip">
+  Subscribe to our RSS feed or join the Discord community for instant update notifications.
+</Callout>
